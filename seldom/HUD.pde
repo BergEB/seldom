@@ -5,10 +5,8 @@ public class HUD {
   public boolean[] interactable;
   boolean fadeStartSet;
   int fadeStart;
-  PImage nextArrow;
   
   HUD() {
-    nextArrow = loadImage("nextArrow.png");
     fadeIntensity = 255;
     fadeStart = 0;
     fadeStartSet = false;
