@@ -77,7 +77,6 @@ void draw() {
   baseLighting();
   l.display();
   hud.display();
-  
   //println(millis() + "\t" + hud.fadeStart + "\t" + hud.fadeIntensity);
   //String txt_fps = String.format(getClass().getName()+ " [fps %6.2f]", frameRate);
   //surface.setTitle(txt_fps);

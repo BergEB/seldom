@@ -51,7 +51,7 @@ public class lobby {
     pushMatrix();
     translate(-637, 60, 0);
     galleryOne.button();
-    galleryOne.interactable(0, 0, 0, 22, 10);
+    galleryOne.interactable(0, 0, 0, 22, 10);   //eventually can move these interactable lines within the button class itself
     translate(243, 0, 0);
     galleryTwo.button();
     galleryTwo.interactable(0, 0, 0, 22, 10);

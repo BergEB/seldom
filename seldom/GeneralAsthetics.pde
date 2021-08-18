@@ -27,20 +27,20 @@ void interactable(double x1, double y1, double x2, double y2) {
   }
 }
   
-Boolean interactableBoolean(float targetX, float targetY, float targetZ, float boundsX, float boundsY) {
-  if (screenX(targetX, targetY, targetZ) > (width / 2) - boundsX && screenX(targetX, targetY, targetZ) < (width / 2) + boundsX && screenY(targetX, targetY, targetZ) > (height / 2) - boundsY && screenY(targetX, targetY, targetZ) < (height / 2) + boundsY) {
-    hud.interactable1 =  true;
-    return true;
-  } else {
-    hud.interactable1 = false;
-    return false;
-  }
-}
+//Boolean interactableBoolean(float targetX, float targetY, float targetZ, float boundsX, float boundsY) {
+//  if (screenX(targetX, targetY, targetZ) > (width / 2) - boundsX && screenX(targetX, targetY, targetZ) < (width / 2) + boundsX && screenY(targetX, targetY, targetZ) > (height / 2) - boundsY && screenY(targetX, targetY, targetZ) < (height / 2) + boundsY) {
+//    hud.interactable1 =  true;
+//    return true;
+//  } else {
+//    hud.interactable1 = false;
+//    return false;
+//  }
+//}
 
-void interactable(float targetX, float targetY, float targetZ, float boundsX, float boundsY) {
-  if (screenX(targetX, targetY, targetZ) > (width / 2) - boundsX && screenX(targetX, targetY, targetZ) < (width / 2) + boundsX && screenY(targetX, targetY, targetZ) > (height / 2) - boundsY && screenY(targetX, targetY, targetZ) < (height / 2) + boundsY) {
-    hud.interactable1 =  true;
-  } else {
-    hud.interactable1 = false;
-  }
-}
+//void interactable(float targetX, float targetY, float targetZ, float boundsX, float boundsY) {
+//  if (screenX(targetX, targetY, targetZ) > (width / 2) - boundsX && screenX(targetX, targetY, targetZ) < (width / 2) + boundsX && screenY(targetX, targetY, targetZ) > (height / 2) - boundsY && screenY(targetX, targetY, targetZ) < (height / 2) + boundsY) {
+//    hud.interactable1 =  true;
+//  } else {
+//    hud.interactable1 = false;
+//  }
+//}

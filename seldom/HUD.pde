@@ -1,7 +1,6 @@
 public class HUD {
   //private float cursorStroke;
   private int fadeIntensity;
-  public boolean interactable1, interactable2, interactable3, interactable4, interactable5, interactable6;
   public boolean[] interactable;
   boolean fadeStartSet;
   int fadeStart;
