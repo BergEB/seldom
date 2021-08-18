@@ -1,0 +1,6 @@
+Gallery class - 
+
+Created with the intent to store button locations and check for interaction with interactable() method (found in General Asthetics)
+
+this will be an instanced object with an interactable boolean and method in each.
+
