@@ -39,7 +39,7 @@ class gallery {
   
   void button() {
     if (buttonStatus == true) {
-      fill(80);
+      fill(0, 80, 0);
       box(20, 8, 2);
       fill(0);
       pushMatrix();
