@@ -64,8 +64,6 @@ public class HUD {
     popMatrix();
     fill(200);
     stroke(200);
-    textFont(robotoThin, 12);
-    text(frameRate, 30, 15);
     cam.endHUD();
   }
   

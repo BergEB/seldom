@@ -92,9 +92,9 @@ SpiralLOW spiral;
 WH wormHole;
 boolean keyHeld;
 PFont robotoThin;
-float viewX = 800;
-float viewY = 200;
-float viewZ = 800;
+float viewX = 0;
+float viewY = 0;
+float viewZ = 0;
 boolean created;
 
 
@@ -274,17 +274,16 @@ public void displaySceneWrap(PGraphics3D canvas){
   
 // render something
 public void displayScene(PGraphics3D canvas){
-  // lights
   canvas.directionalLight(255, 255, 255, 2000,6000,4000);
   canvas.directionalLight(255, 255, 255, -2000,-6000,-4000);
   canvas.ambientLight(64, 64, 64);
   
   noCursor();
-  baseLighting();
-  l.display();
-  //hud.display();
+  //baseLighting();
   
   l.wallsCreate(canvas);
+  l.buttonsCreate(canvas);
+  hud.display();
 }
 
 public void keyReleased(){

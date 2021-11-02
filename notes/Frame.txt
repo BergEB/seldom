@@ -1,0 +1,2 @@
+I thought about making two sets of button textures instead on an interactable box that modulates size based on the active toggle,
+but I think it would be better to make two sets of buttons, one pressed, one not, and modulate between the two instead of a texture.

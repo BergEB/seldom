@@ -1,39 +1,147 @@
 public class lobby {
   //private boolean lightswitch;
   PShape lobby_walls;
+  PShape lobby_buttons;
   
   lobby() {
     //lightswitch = true;
   }
   
   void display() {
-    buttons();
+    //buttons();
     //lightSwitch();
   }
   
-  void buttons() {
-    pushMatrix();
-    translate(800, 400, 800);
-    translate(-637, 60, 0);
-    galleryOne.button();
-    galleryOne.interactable(0, 0, 0, 22, 10);   //eventually can move these interactable lines within the button class itself
-    translate(243, 0, 0);
-    galleryTwo.button();
-    galleryTwo.interactable(0, 0, 0, 22, 10);
-    translate(243, 0, 0);
-    galleryThree.button();
-    galleryThree.interactable(0, 0, 0, 22, 10);
-    translate(243, 0, 0);
-    galleryFour.button();
-    galleryFour.interactable(0, 0, 0, 22, 10);
-    translate(243, 0, 0);
-    galleryFive.button();
-    galleryFive.interactable(0, 0, 0, 22, 10);
-    translate(243, 0, 0);
-    gallerySix.button();
-    gallerySix.interactable(0, 0, 0, 22, 10);
-    popMatrix();
+  
+  public void buttonsCreate(PGraphics3D canvas) {
+    if(lobby_buttons != null){
+      canvas.shape(lobby_buttons);
+      return;
+    }
+    
+    lobby_buttons = createShape(GROUP);
+    
+    
+      fill(0, 0, 0);  // Development color, not for release
+    noStroke();
+    
+    PShape frame_button1 = createShape();
+    frame_button1.beginShape(TRIANGLE_STRIP);
+    frame_button1.vertex(-649, 56, -796);
+    frame_button1.vertex(-629, 56, -796);
+    frame_button1.vertex(-649, 66, -796);
+    frame_button1.vertex(-629, 66, -796);
+    frame_button1.vertex(-629, 66, -800);
+    frame_button1.vertex(-629, 56, -796);
+    frame_button1.vertex(-629, 56, -800);
+    frame_button1.vertex(-649, 56, -796);
+    frame_button1.vertex(-649, 56, -800);
+    frame_button1.vertex(-649, 66, -796);
+    frame_button1.vertex(-649, 66, -800);
+    frame_button1.vertex(-629, 66, -800);
+    frame_button1.vertex(-649, 56, -800);
+    frame_button1.vertex(-629, 56, -800);
+    frame_button1.endShape();
+    lobby_buttons.addChild(frame_button1);
+    
+    PShape frame_button2 = createShape();
+    frame_button2.beginShape(TRIANGLE_STRIP);
+    frame_button2.vertex(-649+(243*1), 56, -796);
+    frame_button2.vertex(-629+(243*1), 56, -796);
+    frame_button2.vertex(-649+(243*1), 66, -796);
+    frame_button2.vertex(-629+(243*1), 66, -796);
+    frame_button2.vertex(-629+(243*1), 66, -800);
+    frame_button2.vertex(-629+(243*1), 56, -796);
+    frame_button2.vertex(-629+(243*1), 56, -800);
+    frame_button2.vertex(-649+(243*1), 56, -796);
+    frame_button2.vertex(-649+(243*1), 56, -800);
+    frame_button2.vertex(-649+(243*1), 66, -796);
+    frame_button2.vertex(-649+(243*1), 66, -800);
+    frame_button2.vertex(-629+(243*1), 66, -800);
+    frame_button2.vertex(-649+(243*1), 56, -800);
+    frame_button2.vertex(-629+(243*1), 56, -800);
+    frame_button2.endShape();
+    lobby_buttons.addChild(frame_button2);
+    
+    PShape frame_button3 = createShape();
+    frame_button3.beginShape(TRIANGLE_STRIP);
+    frame_button3.vertex(-649+(243*2), 56, -796);
+    frame_button3.vertex(-629+(243*2), 56, -796);
+    frame_button3.vertex(-649+(243*2), 66, -796);
+    frame_button3.vertex(-629+(243*2), 66, -796);
+    frame_button3.vertex(-629+(243*2), 66, -800);
+    frame_button3.vertex(-629+(243*2), 56, -796);
+    frame_button3.vertex(-629+(243*2), 56, -800);
+    frame_button3.vertex(-649+(243*2), 56, -796);
+    frame_button3.vertex(-649+(243*2), 56, -800);
+    frame_button3.vertex(-649+(243*2), 66, -796);
+    frame_button3.vertex(-649+(243*2), 66, -800);
+    frame_button3.vertex(-629+(243*2), 66, -800);
+    frame_button3.vertex(-649+(243*2), 56, -800);
+    frame_button3.vertex(-629+(243*2), 56, -800);
+    frame_button3.endShape();
+    lobby_buttons.addChild(frame_button3);
+    
+    PShape frame_button4 = createShape();
+    frame_button4.beginShape(TRIANGLE_STRIP);
+    frame_button4.vertex(-649+(243*3), 56, -796);
+    frame_button4.vertex(-629+(243*3), 56, -796);
+    frame_button4.vertex(-649+(243*3), 66, -796);
+    frame_button4.vertex(-629+(243*3), 66, -796);
+    frame_button4.vertex(-629+(243*3), 66, -800);
+    frame_button4.vertex(-629+(243*3), 56, -796);
+    frame_button4.vertex(-629+(243*3), 56, -800);
+    frame_button4.vertex(-649+(243*3), 56, -796);
+    frame_button4.vertex(-649+(243*3), 56, -800);
+    frame_button4.vertex(-649+(243*3), 66, -796);
+    frame_button4.vertex(-649+(243*3), 66, -800);
+    frame_button4.vertex(-629+(243*3), 66, -800);
+    frame_button4.vertex(-649+(243*3), 56, -800);
+    frame_button4.vertex(-629+(243*3), 56, -800);
+    frame_button4.endShape();
+    lobby_buttons.addChild(frame_button4);
+    
+    PShape frame_button5 = createShape();
+    frame_button5.beginShape(TRIANGLE_STRIP);
+    frame_button5.vertex(-649+(243*4), 56, -796);
+    frame_button5.vertex(-629+(243*4), 56, -796);
+    frame_button5.vertex(-649+(243*4), 66, -796);
+    frame_button5.vertex(-629+(243*4), 66, -796);
+    frame_button5.vertex(-629+(243*4), 66, -800);
+    frame_button5.vertex(-629+(243*4), 56, -796);
+    frame_button5.vertex(-629+(243*4), 56, -800);
+    frame_button5.vertex(-649+(243*4), 56, -796);
+    frame_button5.vertex(-649+(243*4), 56, -800);
+    frame_button5.vertex(-649+(243*4), 66, -796);
+    frame_button5.vertex(-649+(243*4), 66, -800);
+    frame_button5.vertex(-629+(243*4), 66, -800);
+    frame_button5.vertex(-649+(243*4), 56, -800);
+    frame_button5.vertex(-629+(243*4), 56, -800);
+    frame_button5.endShape();
+    lobby_buttons.addChild(frame_button5);
+    
+    PShape frame_button6 = createShape();
+    frame_button6.beginShape(TRIANGLE_STRIP);
+    frame_button6.vertex(-649+(243*5), 56, -796);
+    frame_button6.vertex(-629+(243*5), 56, -796);
+    frame_button6.vertex(-649+(243*5), 66, -796);
+    frame_button6.vertex(-629+(243*5), 66, -796);
+    frame_button6.vertex(-629+(243*5), 66, -800);
+    frame_button6.vertex(-629+(243*5), 56, -796);
+    frame_button6.vertex(-629+(243*5), 56, -800);
+    frame_button6.vertex(-649+(243*5), 56, -796);
+    frame_button6.vertex(-649+(243*5), 56, -800);
+    frame_button6.vertex(-649+(243*5), 66, -796);
+    frame_button6.vertex(-649+(243*5), 66, -800);
+    frame_button6.vertex(-629+(243*5), 66, -800);
+    frame_button6.vertex(-649+(243*5), 56, -800);
+    frame_button6.vertex(-629+(243*5), 56, -800);
+    frame_button6.endShape();
+    lobby_buttons.addChild(frame_button6);
   }
+  
+  
+  
   
   public void wallsCreate(PGraphics3D canvas) {
     if(lobby_walls != null){
@@ -44,7 +152,7 @@ public class lobby {
     lobby_walls = createShape(GROUP);
     
     // 14 boxes in total, there may be a way to automate their creation, but for now there are more important things at hand
-    fill(100, 0, 100);  //  Development color, not for release
+    fill(100, 100, 100);  //  Development color, not for release
     noStroke();
     
     
@@ -179,6 +287,31 @@ public class lobby {
     wall_rect14.endShape(CLOSE);
     lobby_walls.addChild(wall_rect14);
   }
+  
+  //void buttons() {               //depreciated
+  //  pushMatrix();
+  //  translate(800, 400, 800);
+  //  translate(-637, 60, 0);
+  //  galleryOne.button();
+  //  galleryOne.interactable(0, 0, 0, 22, 10);   //eventually can move these interactable lines within the button class itself
+  //  translate(243, 0, 0);
+  //  galleryTwo.button();
+  //  galleryTwo.interactable(0, 0, 0, 22, 10);
+  //  translate(243, 0, 0);
+  //  galleryThree.button();
+  //  galleryThree.interactable(0, 0, 0, 22, 10);
+  //  translate(243, 0, 0);
+  //  galleryFour.button();
+  //  galleryFour.interactable(0, 0, 0, 22, 10);
+  //  translate(243, 0, 0);
+  //  galleryFive.button();
+  //  galleryFive.interactable(0, 0, 0, 22, 10);
+  //  translate(243, 0, 0);
+  //  gallerySix.button();
+  //  gallerySix.interactable(0, 0, 0, 22, 10);
+  //  popMatrix();
+  //}
+  
   
   //void lightSwitch() {
   //  if (mouseWithin(1152.0, 530.0, 1186.0, 569.0)) {
