@@ -23,9 +23,9 @@ class gallery {
   void main() {
     if (mousePressed && mouseButton == LEFT && buttonStatus == false) {
       buttonStatus = true;
-      qCam.position.x = 193 + (243 * (galleryNum - 1));
-      qCam.position.y = 200;
-      qCam.position.z = 100;
+      qCam.position.x = -850 + (243 * (galleryNum));
+      qCam.position.y = 0;
+      qCam.position.z = -725;
       qCam.pan = -PI/2;
       qCam.tilt = 0;
       qCam.speed = 0;
@@ -37,38 +37,57 @@ class gallery {
     
   }
   
+  void buttonStatus() {
+    if (buttonStatus == true) {
+      display();
+    }
+  }
+  
   void button() {
     if (buttonStatus == true) {
-      fill(0, 80, 0);
-      box(20, 8, 2);
-      fill(0);
       pushMatrix();
       display();
       popMatrix();
-    } else {
-      box(20, 8, 6);
     }
   }
   
   void display() {
-    translate(30, -60, 0); //should be the point at the center of each window/frame (see where button method is used in lobby)
+    //translate(30, -60, 0); //should be the point at the center of each window/frame (see where button method is used in lobby)
     if (galleryNum == 1) {
-      
+      pushMatrix();
+      translate(-1000, -100, -2000);
+      t0.display();
+      popMatrix();
     }
     if (galleryNum == 2) {
-      
+      pushMatrix();
+      translate(-1250, -200, -1000);
+      polyThree.display();
+      popMatrix();
     }
     if (galleryNum == 3) {
-      
+      pushMatrix();
+      translate(-1000, -200, -1000);
+      polyFour.display();
+      popMatrix();
     }
     if (galleryNum == 4) {
-      
+      pushMatrix();
+      translate(-750, -200, -1000);
+      polyFive.display();
+      popMatrix();
     }
     if (galleryNum == 5) {
-      
+      pushMatrix();
+      translate(-500, -200, -1000);
+      polySix.display();
+      popMatrix();
     }
     if (galleryNum == 6) {
-      
+      pushMatrix();
+      translate(118, -5, -775);
+      spiral.display();
+      popMatrix();
     }
   }
 }

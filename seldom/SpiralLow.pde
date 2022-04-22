@@ -25,6 +25,6 @@ class SpiralLOW {
     }
     endShape();
     popMatrix();
-    p+= PI / 250;
+    p+= PI / 2500;
   }
 }

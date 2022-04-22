@@ -23,7 +23,7 @@ class TriaFlow {
     translate(300, -50, -300);
     pushMatrix();
     translate(475, 0, -400);
-    rotateY(R * 100);
+    rotateY(R*4);
     translate(-475, 0, 400);
     for (int i = polygons; i > 0; i--) {
       pushMatrix();

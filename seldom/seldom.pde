@@ -133,19 +133,17 @@ void setup() {
   galleryFour = new gallery(4);
   galleryFive = new gallery(5);
   gallerySix = new gallery(6);
-  //t0 =  new heightMapObject();
-  //polyThree = new TriaFlow(3);
-  //polyFour = new TriaFlow(4);
-  //polyFive = new TriaFlow(5);
-  //polySix = new TriaFlow(6);
+  t0 =  new heightMapObject();
+  polyThree = new TriaFlow(3);
+  polyFour = new TriaFlow(4);
+  polyFive = new TriaFlow(5);
+  polySix = new TriaFlow(6);
   //polySeven = new TriaFlow(7);
-  //spiral = new SpiralLOW();
+  spiral = new SpiralLOW();
   //wormHole = new WH(40);
   //robotoThin = createFont("Roboto-Thin.ttf", 32);
   //defo = new defoText();
   qCam = new QueasyCam(this);
-  
-  //t0.declare();
   qCam.position.x = viewX;
   qCam.position.y = viewY;
   qCam.position.z = viewZ;
@@ -283,6 +281,14 @@ public void displayScene(PGraphics3D canvas){
   
   l.wallsCreate(canvas);
   l.buttonsCreate(canvas);
+  pushMatrix();
+  l.display();
+  popMatrix();
+  GDisplay();
+  //pushMatrix();
+  //translate(-1000, 100, -1600);
+  //t0.display();
+  //popMatrix();
   hud.display();
 }
 

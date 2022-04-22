@@ -29,7 +29,7 @@ class heightMapObject {
   void display0() {
     noLights();
     pushMatrix();
-    translate(400, 100, -1000);
+    
     rotateX(PI / 3);
     strokeWeight(0.5);
     yoff = yoffBase;

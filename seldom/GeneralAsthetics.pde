@@ -17,6 +17,15 @@ boolean mouseWithin(double x1, double y1, double x2, double y2) {
   }
 }
 
+void GDisplay() {
+  galleryOne.buttonStatus();
+  galleryTwo.buttonStatus();
+  galleryThree.buttonStatus();
+  galleryFour.buttonStatus();
+  galleryFive.buttonStatus();
+  gallerySix.buttonStatus();
+}
+
 void interactable(double x1, double y1, double x2, double y2) {
   if (mouseWithin(x1, y1, x2, y2)) {
     //hud.cursorStroke = 200;

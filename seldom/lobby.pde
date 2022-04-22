@@ -8,7 +8,7 @@ public class lobby {
   }
   
   void display() {
-    //buttons();
+    buttons();
     //lightSwitch();
   }
   
@@ -22,7 +22,7 @@ public class lobby {
     lobby_buttons = createShape(GROUP);
     
     
-      fill(0, 0, 0);  // Development color, not for release
+    fill(0, 0, 0);  // Development color, not for release
     noStroke();
     
     PShape frame_button1 = createShape();
@@ -288,29 +288,15 @@ public class lobby {
     lobby_walls.addChild(wall_rect14);
   }
   
-  //void buttons() {               //depreciated
-  //  pushMatrix();
-  //  translate(800, 400, 800);
-  //  translate(-637, 60, 0);
-  //  galleryOne.button();
-  //  galleryOne.interactable(0, 0, 0, 22, 10);   //eventually can move these interactable lines within the button class itself
-  //  translate(243, 0, 0);
-  //  galleryTwo.button();
-  //  galleryTwo.interactable(0, 0, 0, 22, 10);
-  //  translate(243, 0, 0);
-  //  galleryThree.button();
-  //  galleryThree.interactable(0, 0, 0, 22, 10);
-  //  translate(243, 0, 0);
-  //  galleryFour.button();
-  //  galleryFour.interactable(0, 0, 0, 22, 10);
-  //  translate(243, 0, 0);
-  //  galleryFive.button();
-  //  galleryFive.interactable(0, 0, 0, 22, 10);
-  //  translate(243, 0, 0);
-  //  gallerySix.button();
-  //  gallerySix.interactable(0, 0, 0, 22, 10);
-  //  popMatrix();
-  //}
+  void buttons() {
+    
+    galleryOne.interactable(-639, 61, -798, 20, 10);   //eventually can move these interactable lines within the button class itself
+    galleryTwo.interactable(-639+(243*1), 61, -798, 20, 10);
+    galleryThree.interactable(-639+(243*2), 61, -798, 20, 10);
+    galleryFour.interactable(-639+(243*3), 61, -798, 20, 10);
+    galleryFive.interactable(-639+(243*4), 61, -798, 20, 10);
+    gallerySix.interactable(-639+(243*5), 61, -798, 20, 10);
+  }
   
   
   //void lightSwitch() {
