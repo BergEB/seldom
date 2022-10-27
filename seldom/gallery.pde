@@ -61,25 +61,25 @@ class gallery {
     }
     if (galleryNum == 2) {
       pushMatrix();
-      translate(-1250, -200, -1000);
+      translate(-1624, -490, -1000);
       polyThree.display();
       popMatrix();
     }
     if (galleryNum == 3) {
       pushMatrix();
-      translate(-1000, -200, -1000);
+      translate(-1381.15, -490, -1000);
       polyFour.display();
       popMatrix();
     }
     if (galleryNum == 4) {
       pushMatrix();
-      translate(-750, -200, -1000);
+      translate(-1138.3, -490, -1000);
       polyFive.display();
       popMatrix();
     }
     if (galleryNum == 5) {
       pushMatrix();
-      translate(-500, -200, -1000);
+      translate(-895.45, -490, -1000);
       polySix.display();
       popMatrix();
     }

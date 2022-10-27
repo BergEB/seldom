@@ -1,5 +1,6 @@
 class TriaFlow {
   float R;
+  float R1;
   float rAcc;
   int spacing;
   int iterationSize;
@@ -9,6 +10,7 @@ class TriaFlow {
   
   TriaFlow(int sides) {
     R = 0;
+    R1 = 0;
     rAcc = PI / 50000;
     spacing = 8;
     iterationSize = 5;
@@ -22,9 +24,10 @@ class TriaFlow {
     noLights();
     translate(300, -50, -300);
     pushMatrix();
-    translate(475, 0, -400);
-    rotateY(R*4);
-    translate(-475, 0, 400);
+    translate(970, 0, -450);
+    rotateY(R1*4);
+    //box(2, 1000, 2); //rotation axis
+    translate(-970, 0, 450);
     for (int i = polygons; i > 0; i--) {
       pushMatrix();
       translate(width/2, height/2, -i*spacing);
@@ -34,9 +37,10 @@ class TriaFlow {
     }
     popMatrix();
     R+= rAcc;
+    R1+= rAcc;
     popMatrix();
     if (keyPressed && key == ' ') {
-      rAcc*= -1;
+      R1 = 0;
     }
   }
   

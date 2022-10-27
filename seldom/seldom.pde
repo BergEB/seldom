@@ -34,7 +34,7 @@ import processing.core.PShape;
 import processing.opengl.PGraphics3D;
 
 // canvas stuff
-boolean START_FULLSCREEN = !true;
+boolean START_FULLSCREEN = true;
 
 int viewport_w = 1280;
 int viewport_h = 720;
@@ -284,6 +284,7 @@ public void displayScene(PGraphics3D canvas){
   pushMatrix();
   l.display();
   popMatrix();
+  coordCompass();
   GDisplay();
   //pushMatrix();
   //translate(-1000, 100, -1600);

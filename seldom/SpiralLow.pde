@@ -15,6 +15,7 @@ class SpiralLOW {
     translate(-150, -350, -1800);
     translate(width / 2, height / 2, /*-s + */775);
     s+=1;
+    box(2, 2, 3000);
     rotateZ(p);
     beginShape(TRIANGLE);
     for(float t = 0; t < 200; t+=1.55) {
