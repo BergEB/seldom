@@ -79,6 +79,10 @@ gallery galleryThree;
 gallery galleryFour;
 gallery galleryFive;
 gallery gallerySix;
+button spiralMinusX;
+button spiralPlusX;
+button spiralMinusY;
+button spiralPlusY;
 PeasyCam cam;
 QueasyCam qCam;
 HUD hud;
@@ -133,6 +137,10 @@ void setup() {
   galleryFour = new gallery(4);
   galleryFive = new gallery(5);
   gallerySix = new gallery(6);
+  spiralMinusX = new button(7);
+  spiralPlusX = new button(8);
+  spiralMinusY = new button(9);
+  spiralPlusY = new button(10);
   t0 =  new heightMapObject();
   polyThree = new TriaFlow(3);
   polyFour = new TriaFlow(4);
@@ -201,33 +209,16 @@ void setup() {
 void draw() {
   
   resizeScreen();
+  aa_mode = AA_MODE.MSAA;
   
-  if (aa_mode == AA_MODE.MSAA){
-    displaySceneWrap(pg_render_msaa);
-    // RGB gamma correction
-    DwFilter.get(context).gamma.apply(pg_render_msaa, pg_render_msaa, gamma);
-  }
-  
-  if (aa_mode == AA_MODE.NoAA || aa_mode == AA_MODE.SMAA || aa_mode == AA_MODE.FXAA){
-    displaySceneWrap(pg_render_noaa);
-    // RGB gamma correction
-    DwFilter.get(context).gamma.apply(pg_render_noaa, pg_render_noaa, gamma);
-  }
-  
-  if (aa_mode == AA_MODE.SMAA) smaa.apply(pg_render_noaa, pg_render_smaa);
-  if (aa_mode == AA_MODE.FXAA) fxaa.apply(pg_render_noaa, pg_render_fxaa);
+  displaySceneWrap(pg_render_msaa);
+  // RGB gamma correction
+  DwFilter.get(context).gamma.apply(pg_render_msaa, pg_render_msaa, gamma);
   
   // only for debugging
   if (aa_mode == AA_MODE.SMAA){
     if (smaa_mode == SMAA_MODE.EGDES) DwFilter.get(context).copy.apply(smaa.tex_edges, pg_render_smaa);
     if (smaa_mode == SMAA_MODE.BLEND) DwFilter.get(context).copy.apply(smaa.tex_blend, pg_render_smaa);
-  }
-  
-  if (aa_mode == AA_MODE.GBAA){
-    displaySceneWrap(pg_render_noaa);
-    // RGB gamma correction
-    DwFilter.get(context).gamma.apply(pg_render_noaa, pg_render_noaa, gamma);
-    gbaa.apply(pg_render_noaa, pg_render_gbaa);
   }
   
   
@@ -275,12 +266,12 @@ public void displayScene(PGraphics3D canvas){
   canvas.directionalLight(255, 255, 255, 2000,6000,4000);
   canvas.directionalLight(255, 255, 255, -2000,-6000,-4000);
   canvas.ambientLight(64, 64, 64);
-  
   noCursor();
   //baseLighting();
   
   l.wallsCreate(canvas);
-  l.buttonsCreate(canvas);
+  l.lobbyButtonsCreate(canvas);
+  l.spiralButtonsCreate(canvas);
   pushMatrix();
   l.display();
   popMatrix();
@@ -294,14 +285,18 @@ public void displayScene(PGraphics3D canvas){
 }
 
 public void keyReleased(){
-  if(key == '1') aa_mode = AA_MODE.NoAA;
-  if(key == '2') aa_mode = AA_MODE.MSAA;
-  if(key == '3') aa_mode = AA_MODE.SMAA;
-  if(key == '4') aa_mode = AA_MODE.FXAA;
-  if(key == '5') aa_mode = AA_MODE.GBAA;
+  //if(key == '1') aa_mode = AA_MODE.NoAA;
+  //if(key == '2') aa_mode = AA_MODE.MSAA;
+  //if(key == '3') aa_mode = AA_MODE.SMAA;
+  //if(key == '4') aa_mode = AA_MODE.FXAA;
+  //if(key == '5') aa_mode = AA_MODE.GBAA;
   
-  if(key == '6') smaa_mode = SMAA_MODE.EGDES;
-  if(key == '7') smaa_mode = SMAA_MODE.BLEND;
-  if(key == '8') smaa_mode = SMAA_MODE.FINAL;
+  //if(key == '6') smaa_mode = SMAA_MODE.EGDES;
+  //if(key == '7') smaa_mode = SMAA_MODE.BLEND;
+  //if(key == '8') smaa_mode = SMAA_MODE.FINAL;
+  
+  if(key == '=') spiral.m+=spiral.ma;
+  if(key == '-') spiral.m-=spiral.ma;
+  
   }
   

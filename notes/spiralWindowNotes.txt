@@ -1,0 +1,88 @@
+STARTING POSITION:
+-639, 61, -798
+
+-6, +16, +0
+-645, 77, -798	//X rotation -
+-633, 77, -798  //X rotation +
+-633, 89, -798  //Z rotation -
+-645, 89, -798  //Z rotation +
+
+POINT CONVERTER FORMAT:
+
+pointConverter("spiral_button1", 570, 77, -798, 8, 8, 4)
+pointConverter("spiral_button2", 582, 77, -798, 8, 8, 4)
+pointConverter("spiral_button3", 582, 89, -798, 8, 8, 4)
+pointConverter("spiral_button4", 570, 89, -798, 8, 8, 4)
+
+OUTPUTS:
+
+PShape spiral_button1 = createShape();
+spiral_button1.beginShape(TRIANGLE_STRIP);
+spiral_button1.vertex(566.0,73.0,-796.0);
+spiral_button1.vertex(574.0,73.0,-796.0);
+spiral_button1.vertex(566.0,81.0,-796.0);
+spiral_button1.vertex(574.0,81.0,-796.0);
+spiral_button1.vertex(574.0,81.0,-800.0);
+spiral_button1.vertex(574.0,73.0,-796.0);
+spiral_button1.vertex(574.0,73.0,-800.0);
+spiral_button1.vertex(566.0,73.0,-796.0);
+spiral_button1.vertex(566.0,73.0,-800.0);
+spiral_button1.vertex(566.0,81.0,-796.0);
+spiral_button1.vertex(566.0,81.0,-800.0);
+spiral_button1.vertex(574.0,81.0,-800.0);
+spiral_button1.vertex(566.0,73.0,-800.0);
+spiral_button1.vertex(574.0,73.0,-800.0);
+spiral_button1.endShape();
+PShape spiral_button2 = createShape();
+spiral_button2.beginShape(TRIANGLE_STRIP);
+spiral_button2.vertex(578.0,73.0,-796.0);
+spiral_button2.vertex(586.0,73.0,-796.0);
+spiral_button2.vertex(578.0,81.0,-796.0);
+spiral_button2.vertex(586.0,81.0,-796.0);
+spiral_button2.vertex(586.0,81.0,-800.0);
+spiral_button2.vertex(586.0,73.0,-796.0);
+spiral_button2.vertex(586.0,73.0,-800.0);
+spiral_button2.vertex(578.0,73.0,-796.0);
+spiral_button2.vertex(578.0,73.0,-800.0);
+spiral_button2.vertex(578.0,81.0,-796.0);
+spiral_button2.vertex(578.0,81.0,-800.0);
+spiral_button2.vertex(586.0,81.0,-800.0);
+spiral_button2.vertex(578.0,73.0,-800.0);
+spiral_button2.vertex(586.0,73.0,-800.0);
+spiral_button2.endShape();
+PShape spiral_button3 = createShape();
+spiral_button3.beginShape(TRIANGLE_STRIP);
+spiral_button3.vertex(578.0,85.0,-796.0);
+spiral_button3.vertex(586.0,85.0,-796.0);
+spiral_button3.vertex(578.0,93.0,-796.0);
+spiral_button3.vertex(586.0,93.0,-796.0);
+spiral_button3.vertex(586.0,93.0,-800.0);
+spiral_button3.vertex(586.0,85.0,-796.0);
+spiral_button3.vertex(586.0,85.0,-800.0);
+spiral_button3.vertex(578.0,85.0,-796.0);
+spiral_button3.vertex(578.0,85.0,-800.0);
+spiral_button3.vertex(578.0,93.0,-796.0);
+spiral_button3.vertex(578.0,93.0,-800.0);
+spiral_button3.vertex(586.0,93.0,-800.0);
+spiral_button3.vertex(578.0,85.0,-800.0);
+spiral_button3.vertex(586.0,85.0,-800.0);
+spiral_button3.endShape();
+PShape spiral_button4 = createShape();
+spiral_button4.beginShape(TRIANGLE_STRIP);
+spiral_button4.vertex(566.0,85.0,-796.0);
+spiral_button4.vertex(574.0,85.0,-796.0);
+spiral_button4.vertex(566.0,93.0,-796.0);
+spiral_button4.vertex(574.0,93.0,-796.0);
+spiral_button4.vertex(574.0,93.0,-800.0);
+spiral_button4.vertex(574.0,85.0,-796.0);
+spiral_button4.vertex(574.0,85.0,-800.0);
+spiral_button4.vertex(566.0,85.0,-796.0);
+spiral_button4.vertex(566.0,85.0,-800.0);
+spiral_button4.vertex(566.0,93.0,-796.0);
+spiral_button4.vertex(566.0,93.0,-800.0);
+spiral_button4.vertex(574.0,93.0,-800.0);
+spiral_button4.vertex(566.0,85.0,-800.0);
+spiral_button4.vertex(574.0,85.0,-800.0);
+spiral_button4.endShape();
+
+

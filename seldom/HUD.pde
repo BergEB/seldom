@@ -10,7 +10,7 @@ public class HUD {
     fadeStart = 0;
     fadeStartSet = false;
     stageStart = true;
-    interactable = new boolean[6];
+    interactable = new boolean[10];
     for (int i = 0; i < interactable.length; i++) {
       interactable[i] = false;
     }
@@ -50,8 +50,12 @@ public class HUD {
     cam.beginHUD();
     pushMatrix();
     noLights();
+    pushMatrix();
+    translate(100, 100);
+    text(spiral.m/PI, 20, 50);
+    popMatrix();
     translate(width / 2, height / 2);
-    if (interactable[0] || interactable[1] || interactable[2] || interactable[3] || interactable[4] || interactable[5]) {
+    if (interactable[0] || interactable[1] || interactable[2] || interactable[3] || interactable[4] || interactable[5] || interactable[6] || interactable[7] || interactable[8] || interactable[9]) {
       //l.interactLight();
       noFill();
       strokeWeight(1.5);

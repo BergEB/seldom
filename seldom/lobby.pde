@@ -2,6 +2,7 @@ public class lobby {
   //private boolean lightswitch;
   PShape lobby_walls;
   PShape lobby_buttons;
+  PShape spiral_buttons;
   
   lobby() {
     //lightswitch = true;
@@ -13,14 +14,98 @@ public class lobby {
   }
   
   
-  public void buttonsCreate(PGraphics3D canvas) {
-    if(lobby_buttons != null){
-      canvas.shape(lobby_buttons);
+  public void spiralButtonsCreate(PGraphics3D canvas) {
+    if(spiral_buttons != null){
+      canvas.shape(spiral_buttons);
       return;
     }
+   
+    fill(0, 0, 0);  // Development color, not for release
+    noStroke();
     
-    lobby_buttons = createShape(GROUP);
-    
+    spiral_buttons = createShape(GROUP);
+   
+    PShape spiral_button1 = createShape();
+    spiral_button1.beginShape(TRIANGLE_STRIP);
+    spiral_button1.vertex(566.0,73.0,-796.0);
+    spiral_button1.vertex(574.0,73.0,-796.0);
+    spiral_button1.vertex(566.0,81.0,-796.0);
+    spiral_button1.vertex(574.0,81.0,-796.0);
+    spiral_button1.vertex(574.0,81.0,-800.0);
+    spiral_button1.vertex(574.0,73.0,-796.0);
+    spiral_button1.vertex(574.0,73.0,-800.0);
+    spiral_button1.vertex(566.0,73.0,-796.0);
+    spiral_button1.vertex(566.0,73.0,-800.0);
+    spiral_button1.vertex(566.0,81.0,-796.0);
+    spiral_button1.vertex(566.0,81.0,-800.0);
+    spiral_button1.vertex(574.0,81.0,-800.0);
+    spiral_button1.vertex(566.0,73.0,-800.0);
+    spiral_button1.vertex(574.0,73.0,-800.0);
+    spiral_button1.endShape();
+    spiral_buttons.addChild(spiral_button1);
+    PShape spiral_button2 = createShape();
+    spiral_button2.beginShape(TRIANGLE_STRIP);
+    spiral_button2.vertex(578.0,73.0,-796.0);
+    spiral_button2.vertex(586.0,73.0,-796.0);
+    spiral_button2.vertex(578.0,81.0,-796.0);
+    spiral_button2.vertex(586.0,81.0,-796.0);
+    spiral_button2.vertex(586.0,81.0,-800.0);
+    spiral_button2.vertex(586.0,73.0,-796.0);
+    spiral_button2.vertex(586.0,73.0,-800.0);
+    spiral_button2.vertex(578.0,73.0,-796.0);
+    spiral_button2.vertex(578.0,73.0,-800.0);
+    spiral_button2.vertex(578.0,81.0,-796.0);
+    spiral_button2.vertex(578.0,81.0,-800.0);
+    spiral_button2.vertex(586.0,81.0,-800.0);
+    spiral_button2.vertex(578.0,73.0,-800.0);
+    spiral_button2.vertex(586.0,73.0,-800.0);
+    spiral_button2.endShape();
+    spiral_buttons.addChild(spiral_button2);
+    PShape spiral_button3 = createShape();
+    spiral_button3.beginShape(TRIANGLE_STRIP);
+    spiral_button3.vertex(578.0,85.0,-796.0);
+    spiral_button3.vertex(586.0,85.0,-796.0);
+    spiral_button3.vertex(578.0,93.0,-796.0);
+    spiral_button3.vertex(586.0,93.0,-796.0);
+    spiral_button3.vertex(586.0,93.0,-800.0);
+    spiral_button3.vertex(586.0,85.0,-796.0);
+    spiral_button3.vertex(586.0,85.0,-800.0);
+    spiral_button3.vertex(578.0,85.0,-796.0);
+    spiral_button3.vertex(578.0,85.0,-800.0);
+    spiral_button3.vertex(578.0,93.0,-796.0);
+    spiral_button3.vertex(578.0,93.0,-800.0);
+    spiral_button3.vertex(586.0,93.0,-800.0);
+    spiral_button3.vertex(578.0,85.0,-800.0);
+    spiral_button3.vertex(586.0,85.0,-800.0);
+    spiral_button3.endShape();
+    spiral_buttons.addChild(spiral_button3);
+    PShape spiral_button4 = createShape();
+    spiral_button4.beginShape(TRIANGLE_STRIP);
+    spiral_button4.vertex(566.0,85.0,-796.0);
+    spiral_button4.vertex(574.0,85.0,-796.0);
+    spiral_button4.vertex(566.0,93.0,-796.0);
+    spiral_button4.vertex(574.0,93.0,-796.0);
+    spiral_button4.vertex(574.0,93.0,-800.0);
+    spiral_button4.vertex(574.0,85.0,-796.0);
+    spiral_button4.vertex(574.0,85.0,-800.0);
+    spiral_button4.vertex(566.0,85.0,-796.0);
+    spiral_button4.vertex(566.0,85.0,-800.0);
+    spiral_button4.vertex(566.0,93.0,-796.0);
+    spiral_button4.vertex(566.0,93.0,-800.0);
+    spiral_button4.vertex(574.0,93.0,-800.0);
+    spiral_button4.vertex(566.0,85.0,-800.0);
+    spiral_button4.vertex(574.0,85.0,-800.0);
+    spiral_button4.endShape();
+    spiral_buttons.addChild(spiral_button4);
+
+    }
+   
+    public void lobbyButtonsCreate(PGraphics3D canvas) {
+      if(lobby_buttons != null){
+        canvas.shape(lobby_buttons);
+        return;
+      }
+    lobby_buttons = createShape(GROUP); 
     
     fill(0, 0, 0);  // Development color, not for release
     noStroke();
@@ -151,7 +236,7 @@ public class lobby {
     
     lobby_walls = createShape(GROUP);
     
-    // 14 boxes in total, there may be a way to automate their creation, but for now there are more important things at hand
+    // 14 boxes in total
     fill(100, 100, 100);  //  Development color, not for release
     noStroke();
     
@@ -289,7 +374,10 @@ public class lobby {
   }
   
   void buttons() {
-    
+    spiralMinusX.interactable(570, 77, -798, 8, 8);
+    spiralPlusX.interactable(582, 77, -798, 8, 8);
+    spiralMinusY.interactable(582, 89, -798, 8, 8);
+    spiralPlusY.interactable(570, 89, -798, 8, 8);
     galleryOne.interactable(-639, 61, -798, 20, 10);   //eventually can move these interactable lines within the button class itself
     galleryTwo.interactable(-639+(243*1), 61, -798, 20, 10);
     galleryThree.interactable(-639+(243*2), 61, -798, 20, 10);
